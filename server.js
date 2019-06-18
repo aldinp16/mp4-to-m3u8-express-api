@@ -5,6 +5,7 @@ const busboy = require('connect-busboy')
 const ffmpeg = require('fluent-ffmpeg')
 const path = require('path')
 const fs = require('fs')
+require('dotenv').config()
 
 const app = express()
 app.use(busboy({ highWaterMark: 2 * 1024 * 1024, }))
@@ -69,6 +70,6 @@ app.route('/').get((req, res) => {
   return res.end()
 })
 
-const server = app.listen(3200, () =>{
+app.listen(process.env.PORT, () =>{
   console.log(`[${new Date()}] Listening on port ${server.address().port}`)
 })
