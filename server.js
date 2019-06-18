@@ -70,6 +70,6 @@ app.route('/').get((req, res) => {
   return res.end()
 })
 
-app.listen(process.env.PORT, () =>{
+const server = app.listen(process.env.PORT, () =>{
   console.log(`[${new Date()}] Listening on port ${server.address().port}`)
 })
