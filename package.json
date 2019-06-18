@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "connect-busboy": "0.0.2",
+    "express": "^4.17.1",
+    "fluent-ffmpeg": "^2.1.2"
+  }
+}
